@@ -41,6 +41,12 @@
       line-height: 1.6;
     }
 
+    ul.key-points {
+      margin-top: 10px;
+      margin-left: 20px;
+      color: #444;
+    }
+
     .portfolio-navbar {
       background: linear-gradient(90deg, #4b6cb7, #182848);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -99,15 +105,15 @@
       margin-bottom: 30px;
     }
 
-    .progress {
-      height: 10px;
-      background-color: #e9ecef;
-      border-radius: 5px;
+    .repo-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4b6cb7;
+      font-weight: 500;
     }
 
-    .progress-bar {
-      background-color: #4b6cb7;
-      border-radius: 5px;
+    .repo-link:hover {
+      text-decoration: underline;
     }
 
     .page-footer {
@@ -129,17 +135,6 @@
 
     section[id] {
       scroll-margin-top: 70px; 
-    }
-
-    .repo-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: #4b6cb7;
-      font-weight: 500;
-    }
-
-    .repo-link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -183,30 +178,47 @@
       <div class="container">
         <h2>Projects</h2>
 
+        <!-- BlogBuzz -->
         <div class="item">
           <h3>BlogBuzz App</h3>
           <h4 class="organization">Android Blogging Platform</h4>
-          <p>A mobile platform where users can create, edit, and like blogs with secure authentication.</p>
+          <p>A dynamic mobile blogging platform where users can create, edit, and engage with blog posts in real-time with secure authentication.</p>
           <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
-          <a href="https://github.com/SrijanSolutions/Blogbuzz" target="_blank" class="repo-link">
+          <ul class="key-points">
+            <li>Implemented Firebase Authentication for secure sign-in and user management.</li>
+            <li>Used Firebase Realtime Database for live data synchronization and content updates.</li>
+            <li>Designed a modern, clean UI with Material Design principles to enhance user experience.</li>
+            <li>Integrated Firebase Storage for image upload and retrieval in blog posts.</li>
+            <li>Followed MVVM architecture and clean code practices for scalability and performance.</li>
+          </ul>
+          <a href="https://github.com/srijanshukla71/Blogbuzz" target="_blank" class="repo-link">
             <i class="icon ion-social-github"></i> View Project on GitHub
           </a>
         </div>
 
+        <!-- IPC Law Awareness -->
         <div class="item">
-          <h3>BNS Law Awareness App</h3>
-          <h4 class="organization">Legal Awareness Application</h4>
-          <p>Provides legal information, lawyer contacts, enquiry forms, and court details for users.</p>
+          <h3>IPC Law Awareness App</h3>
+          <h4 class="organization">Legal Information & Awareness Platform</h4>
+          <p>An Android application offering categorized Indian Penal Code and BNS sections, legal resources, and user-friendly tools for awareness.</p>
           <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
-          <a href="https://github.com/SrijanSolutions/IPC_LawAPP" target="_blank" class="repo-link">
+          <ul class="key-points">
+            <li>Developed an intuitive interface to browse and search IPC/BNS laws efficiently.</li>
+            <li>Integrated Firebase for storing and retrieving legal data securely.</li>
+            <li>Added lawyer directory and enquiry form to enhance user engagement.</li>
+            <li>Optimized app for offline accessibility and lightweight performance.</li>
+            <li>Focused on usability and responsive design to ensure a smooth experience.</li>
+          </ul>
+          <a href="https://github.com/srijanshukla71/IPC_LawAPP" target="_blank" class="repo-link">
             <i class="icon ion-social-github"></i> View Project on GitHub
           </a>
         </div>
 
+        <!-- Fire Robot -->
         <div class="item">
           <h3>Automatic Fire-Extinguisher Robotic Vehicle</h3>
           <h4 class="organization">IoT Robotics Project</h4>
-          <p>Arduino-based vehicle detecting and extinguishing fires using IR sensors and DC pump.</p>
+          <p>Arduino-based vehicle that detects and extinguishes fires using IR sensors and an automatic DC pump system.</p>
           <p><strong>Tech:</strong> Arduino, IoT, Sensors</p>
         </div>
       </div>
@@ -232,7 +244,7 @@
         </div>
 
         <div class="item">
-          <h3>Student Ambassador</h3>
+          <h3>Student Ambassador</h4>
           <h4 class="organization">Internshala (Remote)</h4>
           <span class="period">Sept – Oct 2025</span>
           <p>Promoted platform, digital marketing, and brand communication; strengthened leadership skills.</p>
@@ -262,7 +274,7 @@
         <div class="item">
           <p><i class="icon ion-at"></i> <a href="mailto:srijanshukla707@gmail.com">srijanshukla707@gmail.com</a></p>
           <p><i class="icon ion-social-linkedin"></i> <a href="https://www.linkedin.com/in/srijan707/">linkedin.com/in/srijan707/</a></p>
-          <p><i class="icon ion-social-github"></i> <a href="https://github.com/SrijanSolutions">github.com/SrijanSolutions</a></p>
+          <p><i class="icon ion-social-github"></i> <a href="https://github.com/srijanshukla71">github.com/srijanshukla71</a></p>
         </div>
       </div>
     </section>
