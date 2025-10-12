@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Srijan Shukla Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
+      margin-top: 80px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #182848;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    h4.organization {
+      font-size: 1rem;
+      color: #6c757d;
+      margin-bottom: 5px;
+    }
+
+    p, ul li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .portfolio-navbar {
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .portfolio-navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .portfolio-navbar .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .portfolio-block {
+      padding: 15px 0;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 20px;
+      border: 4px solid #4b6cb7;
+    }
+
+    .about-me {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #444;
+    }
+
+    .about-me p {
+      font-size: 1.1rem;
+    }
+
+    .btn-primary {
+      background-color: #4b6cb7;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #3551a3;
+    }
+
+    .item {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .progress {
+      height: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+
+    .progress-bar {
+      background-color: #4b6cb7;
+      border-radius: 5px;
+    }
+
+    .page-footer {
+      background-color: #182848;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+
+    section[id] {
+      scroll-margin-top: 70px; 
+    }
+
+    .repo-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4b6cb7;
+      font-weight: 500;
+    }
+
+    .repo-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar">
+    <div class="container">
+      <a class="navbar-brand logo" href="#" style="font-size: 1.5rem;">Srijan Shukla</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page" id="home">
+    <!-- About Me -->
+    <section class="portfolio-block block-intro border-bottom text-center">
+      <div class="container">
+        <div class="avatar" style="background-image: url('./profilephoto.jpg');"></div>
+        <div class="about-me">
+          <p>
+            Hello! I’m <strong>Srijan Shukla</strong>, an aspiring <strong>Android Developer</strong> and tech enthusiast pursuing a <strong>BCA</strong> from United Institute of Management, Allahabad. I specialize in building intuitive and scalable Android apps using <strong>Java, Firebase, and XML</strong>, blending creativity with functionality. I’ve developed projects like <em>BlogBuzz</em> and <em>BNS Law Awareness App</em>, focusing on user-friendly design and real-world problem-solving. Passionate about innovation and collaboration, I aim to create impactful mobile experiences that connect technology with people.
+          </p>
+        </div>
+        <a class="btn btn-primary mt-3" href="./srijan shukla07 resume.pdf" download>Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="portfolio-block" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="item">
+          <h3>BlogBuzz App</h3>
+          <h4 class="organization">Android Blogging Platform</h4>
+          <p>A mobile platform where users can create, edit, and like blogs with secure authentication.</p>
+          <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
+          <a href="https://github.com/SrijanSolutions/Blogbuzz" target="_blank" class="repo-link">
+            <i class="icon ion-social-github"></i> View Project on GitHub
+          </a>
+        </div>
+
+        <div class="item">
+          <h3>BNS Law Awareness App</h3>
+          <h4 class="organization">Legal Awareness Application</h4>
+          <p>Provides legal information, lawyer contacts, enquiry forms, and court details for users.</p>
+          <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
+          <a href="https://github.com/SrijanSolutions/IPC_LawAPP" target="_blank" class="repo-link">
+            <i class="icon ion-social-github"></i> View Project on GitHub
+          </a>
+        </div>
+
+        <div class="item">
+          <h3>Automatic Fire-Extinguisher Robotic Vehicle</h3>
+          <h4 class="organization">IoT Robotics Project</h4>
+          <p>Arduino-based vehicle detecting and extinguishing fires using IR sensors and DC pump.</p>
+          <p><strong>Tech:</strong> Arduino, IoT, Sensors</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section class="portfolio-block" id="internships">
+      <div class="container">
+        <h2>Internships & Experience</h2>
+
+        <div class="item">
+          <h3>Android Development Intern</h3>
+          <h4 class="organization">Oasis Infobyte (Remote)</h4>
+          <span class="period">Sept 2025</span>
+          <p>Developed Android apps, optimized UI/UX, and followed best development practices.</p>
+        </div>
+
+        <div class="item">
+          <h3>Intern Developer</h3>
+          <h4 class="organization">Navodita Infotech (Allahabad)</h4>
+          <span class="period">May – Jun 2025</span>
+          <p>Built BlogBuzz app using Java and Firebase, improving UI/UX and implementing authentication.</p>
+        </div>
+
+        <div class="item">
+          <h3>Student Ambassador</h3>
+          <h4 class="organization">Internshala (Remote)</h4>
+          <span class="period">Sept – Oct 2025</span>
+          <p>Promoted platform, digital marketing, and brand communication; strengthened leadership skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="portfolio-block" id="achievements">
+      <div class="container">
+        <h2>Achievements</h2>
+        <div class="item">
+          <h4>Winner – Group Discussion, Presentation & Modeling</h4>
+          <p>United Institute of Management</p>
+          <h4>Silver Medalist – Inter-College Kabaddi Championship</h4>
+          <p>Demonstrated teamwork and sportsmanship.</p>
+          <h4>2nd Prize – District Science Exhibition</h4>
+          <p>Automatic Fire-Extinguisher Robotic Vehicle</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="portfolio-block" id="contact">
+      <div class="container">
+        <h2>Contact Info</h2>
+        <div class="item">
+          <p><i class="icon ion-at"></i> <a href="mailto:srijanshukla707@gmail.com">srijanshukla707@gmail.com</a></p>
+          <p><i class="icon ion-social-linkedin"></i> <a href="https://www.linkedin.com/in/srijan707/">linkedin.com/in/srijan707/</a></p>
+          <p><i class="icon ion-social-github"></i> <a href="https://github.com/SrijanSolutions">github.com/SrijanSolutions</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <p class="mt-3">© 2025 Srijan Shukla. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+      });
+    });
+  </script>
+</body>
+</html>
