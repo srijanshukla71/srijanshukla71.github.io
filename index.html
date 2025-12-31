@@ -2,327 +2,492 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <title>Srijan Shukla Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srijan Shukla - Professional Portfolio</title>
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
     :root {
-      --primary-color: #2563eb;
+      --primary: #2563eb;
       --primary-dark: #1d4ed8;
-      --secondary-color: #64748b;
-      --accent-color: #f59e0b;
-      --text-primary: #1e293b;
-      --text-secondary: #64748b;
-      --text-light: #94a3b8;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f8fafc;
-      --bg-dark: #0f172a;
-      --border-color: #e2e8f0;
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --accent: #fbbf24;
+      --success: #10b981;
+      --text: #0f172a;
+      --muted: #64748b;
+      --card: #ffffff;
+      --bg: #f8fafc;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.12);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text-primary);
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
       margin-top: 80px;
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      line-height: 1.3;
-      margin-bottom: 1rem;
+    h1, h2, h3, h4, h5 {
+      font-weight: 700;
+      color: var(--text);
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.5rem;
-      color: var(--text-primary);
-      position: relative;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-      border-radius: 2px;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    h4.organization {
+    p {
+      color: var(--muted);
       font-size: 1rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.75rem;
-      font-weight: 500;
     }
 
-    p, ul li {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    ul.key-points {
-      margin-top: 1rem;
-      margin-left: 1.5rem;
-      color: var(--text-secondary);
-    }
-
-    ul.key-points li {
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
-
-    ul.key-points li::marker {
-      color: var(--primary-color);
-    }
-
-    .portfolio-navbar {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
+    /* Navbar */
+    .navbar {
+      background: var(--card) !important;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
       transition: all 0.3s ease;
     }
 
-    .portfolio-navbar.scrolled {
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: var(--shadow-md);
+    .navbar.scrolled {
+      box-shadow: 0 6px 30px rgba(15, 23, 42, 0.08);
     }
 
     .navbar-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem !important;
-      font-weight: 700;
-      color: var(--text-primary) !important;
-      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text) !important;
     }
 
-    .portfolio-navbar .nav-link {
-      color: var(--text-secondary) !important;
+    .nav-link {
       font-weight: 500;
-      font-size: 0.95rem;
-      padding: 0.75rem 1rem !important;
-      transition: all 0.3s ease;
+      color: var(--muted) !important;
+      margin: 0 0.3rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+    }
+
+    /* Hero Section */
+    .hero {
       position: relative;
-    }
-
-    .portfolio-navbar .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--primary-color);
-      transition: width 0.3s ease;
-    }
-
-    .portfolio-navbar .nav-link:hover,
-    .portfolio-navbar .nav-link.active {
-      color: var(--primary-color) !important;
-    }
-
-    .portfolio-navbar .nav-link:hover::after,
-    .portfolio-navbar .nav-link.active::after {
-      width: 100%;
-    }
-
-    .portfolio-block {
-      padding: 4rem 0;
-    }
-
-    .hero-section {
-      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-      padding: 6rem 0;
-      position: relative;
+      background: linear-gradient(135deg, var(--card) 0%, #f1f5f9 100%);
+      padding: 6rem 0 5rem;
       overflow: hidden;
     }
 
-    .hero-section::before {
+    .hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23e2e8f0" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-      opacity: 0.5;
+      top: -150px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(251, 191, 36, 0.1));
+      filter: blur(80px);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .avatar {
       width: 200px;
       height: 200px;
       border-radius: 50%;
+      border: 6px solid var(--card);
+      box-shadow: var(--shadow);
+      margin: 0 auto 2rem;
       background-size: cover;
       background-position: center;
-      margin: 0 auto 2rem;
-      border: 4px solid var(--bg-primary);
-      box-shadow: var(--shadow-xl);
-      position: relative;
+      background-image: url('./profileimage1.png');
       transition: transform 0.3s ease;
-    }
-
-    .avatar::before {
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      right: -4px;
-      bottom: -4px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      z-index: -1;
     }
 
     .avatar:hover {
       transform: scale(1.05);
     }
 
-    .about-me {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: var(--text-secondary);
-    }
-
-    .about-me p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-      border: none;
-      padding: 0.875rem 2rem;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-md);
-      text-decoration: none;
+    .badge-pill {
       display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.4rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 50px;
+      margin-bottom: 1rem;
     }
 
-    .btn-primary:hover {
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--text), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      border-radius: 50px;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border: none;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
       transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
     }
 
-    .item {
-      background: var(--bg-primary);
+    /* Sections */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .card-simple {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
       padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow);
       margin-bottom: 2rem;
-      border: 1px solid var(--border-color);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
-    .item::before {
+    .card-simple::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 5px;
       height: 100%;
-      background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+      background: linear-gradient(180deg, var(--primary), var(--accent));
     }
 
-    .item:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl);
+    .card-simple:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .repo-link {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 1rem;
-      color: var(--primary-color);
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      background: rgba(37, 99, 235, 0.1);
+    .card-simple h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .repo-link:hover {
-      background: rgba(37, 99, 235, 0.2);
-      transform: translateX(4px);
-    }
-
-    .repo-link i {
-      margin-right: 0.5rem;
-    }
-
-    .period {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--accent-color), #f97316);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.875rem;
-      font-weight: 600;
+    .card-simple h4 {
+      font-size: 1.1rem;
+      color: var(--muted);
       margin-bottom: 1rem;
     }
 
-    .page-footer {
-      background: var(--bg-dark);
-      color: white;
-      padding: 3rem 0;
-      text-align: center;
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .skill-category h4 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Certificates Section */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .certificate-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
       position: relative;
     }
 
-    .page-footer::before {
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .certificate-card .cert-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .certificate-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate-card .issuer {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate-card .date {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
       content: '';
       position: absolute;
+      left: 15px;
       top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+
+    .timeline-block {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-block::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 2rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 4px solid var(--card);
+      background: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+    }
+
+    .timeline-block h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-block .badge-pill {
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-block ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-block ul li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    /* Education */
+    .education-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    .education-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Achievements */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .achievement-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .achievement-card .icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--accent), #f97316);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .achievement-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .achievement-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Contact */
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-list li:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list i {
+      margin-right: 1rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      width: 40px;
+      text-align: center;
+    }
+
+    .contact-list a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .contact-list a:hover {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-bottom: 2rem;
     }
 
     .social-icons a {
@@ -331,125 +496,72 @@
       justify-content: center;
       width: 50px;
       height: 50px;
-      margin: 0 0.5rem;
-      background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
       color: white;
+      margin: 0 0.5rem;
       text-decoration: none;
       transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
     }
 
     .social-icons a:hover {
-      background: var(--primary-color);
-      transform: translateY(-2px);
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* Repo Link */
+    .repo-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .repo-link:hover {
+      color: var(--primary-dark);
+      transform: translateX(5px);
+    }
+
+    .repo-link i {
+      margin-right: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { margin-top: 70px; }
+      .hero { padding: 4rem 0; }
+      .hero-title { font-size: 2.2rem; }
+      .section { padding: 3rem 0; }
+      .section-title { font-size: 2rem; }
+      .card-simple { padding: 1.5rem; }
+      .certificates-grid, .achievements-grid, .skills-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     section[id] {
       scroll-margin-top: 80px;
     }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      background: rgba(37, 99, 235, 0.05);
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .contact-item:hover {
-      background: rgba(37, 99, 235, 0.1);
-      transform: translateX(8px);
-    }
-
-    .contact-item i {
-      font-size: 1.25rem;
-      color: var(--primary-color);
-      margin-right: 1rem;
-      width: 24px;
-    }
-
-    .contact-item a {
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .contact-item a:hover {
-      color: var(--primary-color);
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .fade-in-up {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      h2 {
-        font-size: 2rem;
-      }
-      
-      .hero-section {
-        padding: 4rem 0;
-      }
-      
-      .avatar {
-        width: 150px;
-        height: 150px;
-      }
-      
-      .item {
-        padding: 1.5rem;
-      }
-      
-      .about-me p {
-        font-size: 1.1rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .portfolio-block {
-        padding: 2rem 0;
-      }
-      
-      h2 {
-        font-size: 1.75rem;
-      }
-      
-      .item {
-        padding: 1.25rem;
-      }
-    }
   </style>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand logo" href="#" style="font-size: 1.5rem;">Srijan Shukla</a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <a class="navbar-brand" href="#home">Srijan Shukla</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="nav">
         <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -457,186 +569,294 @@
     </div>
   </nav>
 
-  <main class="page" id="home">
+  <main id="home">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero">
       <div class="container">
-        <div class="hero-content text-center fade-in-up">
-          <div class="avatar" style="background-image: url('./profileimage1.png');"></div>
-          <div class="about-me">
-            <h1 style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--text-primary);">Srijan Shukla</h1>
-            <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 2rem; font-weight: 500;">Android Developer & Tech Enthusiast</h3>
-            <p>
-             Passionate Android Developer currently pursuing Bachelor of Computer Applications (BCA), specializing in Java, Kotlin, Firebase, and XML. I create intuitive mobile experiences that solve real problems by blending technical skills with user-centric design. Constantly learning and adapting to new technologies, I thrive in collaborative environments. Eager to contribute to innovative projects and grow as a professional developer.
- </p>
-            <a class="btn btn-primary" href="./srijan resume.pdf" download="srijan resume.pdf" onclick="trackDownload('resume')">
-            <i class="fas fa-download" style="margin-right: 0.5rem;"></i>Download Resume (PDF)
-            </a>
+        <div class="hero-content">
+          <div class="avatar"></div>
+          <span class="badge-pill">Android Developer & Tech Enthusiast</span>
+          <h1 class="hero-title">Srijan Shukla</h1>
+          <p class="hero-subtitle">Building Mobile Solutions That Matter</p>
+          <p class="mb-4" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem;">
+            Passionate Android Developer currently pursuing BCA, specializing in Java, Kotlin, Firebase, and XML. I create intuitive mobile experiences that solve real-world problems. Constantly learning, adapting, and contributing to innovative projects.
+          </p>
+          <a class="btn btn-primary cta-btn" href="./srijan resume.pdf" download>
+            <i class="fas fa-download mr-2"></i>Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4><i class="fab fa-android mr-2"></i>Mobile Development</h4>
+            <div>
+              <span class="skill-tag">Android</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Kotlin</span>
+              <span class="skill-tag">XML</span>
+              <span class="skill-tag">Material Design</span>
+              <span class="skill-tag">MVVM Architecture</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-database mr-2"></i>Backend & Database</h4>
+            <div>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Firebase Auth</span>
+              <span class="skill-tag">Realtime Database</span>
+              <span class="skill-tag">Firebase Storage</span>
+              <span class="skill-tag">Cloud Firestore</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4><i class="fas fa-code mr-2"></i>Tools & Technologies</h4>
+            <div>
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Android Studio</span>
+              <span class="skill-tag">Arduino</span>
+              <span class="skill-tag">IoT</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">Data Analytics</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="portfolio-block" id="projects">
+    <section class="section" id="projects">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
 
-        <!-- BlogBuzz -->
-        <div class="item">
+        <div class="card-simple">
           <h3>BlogBuzz App</h3>
-          <h4 class="organization">Android Blogging Platform</h4>
-          <p>A dynamic mobile blogging platform where users can create, edit, and engage with blog posts in real-time with secure authentication.</p>
-          <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
-          <ul class="key-points">
-            <li>Implemented Firebase Authentication for secure sign-in and user management.</li>
-            <li>Used Firebase Realtime Database for live data synchronization and content updates.</li>
-            <li>Designed a modern, clean UI with Material Design principles to enhance user experience.</li>
-            <li>Integrated Firebase Storage for image upload and retrieval in blog posts.</li>
-            <li>Followed MVVM architecture and clean code practices for scalability and performance.</li>
+          <h4>Android Blogging Platform</h4>
+          <p>A dynamic mobile blogging platform where users can create, edit, and engage with blog posts in real-time with secure authentication and modern UI design.</p>
+          <p><strong>Technologies:</strong> Android, Java, Firebase, XML, Material Design</p>
+          <ul>
+            <li>Implemented Firebase Authentication for secure sign-in and user management</li>
+            <li>Used Firebase Realtime Database for live data synchronization and content updates</li>
+            <li>Designed a modern, clean UI with Material Design principles</li>
+            <li>Integrated Firebase Storage for image upload and retrieval in blog posts</li>
+            <li>Followed MVVM architecture and clean code practices for scalability</li>
           </ul>
           <a href="https://github.com/srijanshukla71/Blogbuzz" target="_blank" class="repo-link">
-            <i class="icon ion-social-github"></i> View Project on GitHub
+            <i class="fab fa-github"></i>View Project on GitHub
           </a>
         </div>
 
-        <!-- BNS Law Awareness -->
-      <div class="item">
-        <h3>BNS Law Awareness App</h3>
-        <h4 class="organization">Legal Information & Awareness Platform</h4>
-        <p>An Android application offering categorized Bharatiya Nyaya Sanhita (BNS) sections, legal resources, lawyer directory, and user-friendly tools for legal awareness.</p>
-       <p><strong>Tech:</strong> Android, Java, Firebase, XML</p>
-    <ul class="key-points">
-       <li>Developed comprehensive BNS law application with lawyer directory and enquiry system</li>
-       <li>Implemented multiple modules including Home Fragments, Live Chat Consultancy, and Case Status Bar</li>
-       <li>Integrated Firebase for storing and retrieving legal data securely</li>
-       <li>Added court information and legal resource sections for enhanced user engagement</li>
-       <li>Optimized app for offline accessibility and lightweight performance</li>
-       <li>Focused on usability and responsive design to ensure smooth legal information access</li>
-    </ul>
-  <a href="https://github.com/srijanshukla71/IPC_LawAPP" target="_blank" class="repo-link">
-    <i class="icon ion-social-github"></i> View Project on GitHub
-  </a>
-</div>
+        <div class="card-simple">
+          <h3>BNS Law Awareness App</h3>
+          <h4>Legal Information & Awareness Platform</h4>
+          <p>An Android application offering categorized Bharatiya Nyaya Sanhita (BNS) sections, legal resources, lawyer directory, and user-friendly tools for legal awareness.</p>
+          <p><strong>Technologies:</strong> Android, Java, Firebase, XML</p>
+          <ul>
+            <li>Developed comprehensive BNS law application with lawyer directory and enquiry system</li>
+            <li>Implemented multiple modules including Home Fragments, Live Chat Consultancy, and Case Status Bar</li>
+            <li>Integrated Firebase for storing and retrieving legal data securely</li>
+            <li>Added court information and legal resource sections for enhanced user engagement</li>
+            <li>Optimized app for offline accessibility and lightweight performance</li>
+          </ul>
+          <a href="https://github.com/srijanshukla71/IPC_LawAPP" target="_blank" class="repo-link">
+            <i class="fab fa-github"></i>View Project on GitHub
+          </a>
+        </div>
 
-        <!-- Fire Robot -->
-        <div class="item">
+        <div class="card-simple">
           <h3>Automatic Fire-Extinguisher Robotic Vehicle</h3>
-          <h4 class="organization">IoT Robotics Project</h4>
-          <p>Arduino-based vehicle that detects and extinguishes fires using IR sensors and an automatic DC pump system.</p>
-          <p><strong>Tech:</strong> Arduino, IoT, Sensors</p>
+          <h4>IoT Robotics Project</h4>
+          <p>Arduino-based autonomous vehicle that detects and extinguishes fires using IR sensors and an automatic DC pump system. Award-winning project at District Science Exhibition.</p>
+          <p><strong>Technologies:</strong> Arduino, IoT, IR Sensors, DC Pump, Embedded Systems</p>
+          <ul>
+            <li>Designed and implemented fire detection system using IR sensors</li>
+            <li>Developed autonomous navigation and fire extinguishing mechanism</li>
+            <li>Integrated DC pump system for automatic fire suppression</li>
+            <li>Won 2nd Prize at District Science Exhibition</li>
+          </ul>
         </div>
       </div>
     </section>
-    <!-- Internships Section -->
-<section class="portfolio-block" id="internships">
-  <div class="container">
-    <h2>Internships & Experience</h2>
 
-    <!-- AICTE – Edunet Foundation -->
-    <div class="item">
-      <h3>Edunet & Digital Skills Intern</h3>
-      <h4 class="organization">AICTE – Edunet Foundation with IBM SkillsBuild</h4>
-      <span class="period">December 2025 – Present</span>
-      <p>Currently completing a 6-week AICTE-certified internship focused on employability skills and digital literacy through IBM's advanced learning platform.</p>
-      <ul class="key-points">
-        <li>Undergoing comprehensive training in Android development, cloud computing, and enterprise solutions</li>
-        <li>Developing a mentor-guided technical project showcasing problem-solving abilities</li>
-        <li>Gaining industry-relevant skills through IBM's professional certification pathways</li>
-        <li>Engaging with cutting-edge technologies and enterprise-grade development practices</li>
-        <li>Building portfolio-ready projects with guidance from industry experts</li>
-      </ul>
-    </div>
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+          <div class="timeline-block">
+            <h4>Edunet & Digital Skills Intern</h4>
+            <span class="badge-pill">December 2025 – Present</span>
+            <p><strong>AICTE – Edunet Foundation with IBM SkillsBuild</strong></p>
+            <p>Currently completing a 6-week AICTE-certified internship focused on employability skills and digital literacy through IBM's advanced learning platform.</p>
+            <ul>
+              <li>Undergoing comprehensive training in Android development, cloud computing, and enterprise solutions</li>
+              <li>Developing a mentor-guided technical project showcasing problem-solving abilities</li>
+              <li>Gaining industry-relevant skills through IBM's professional certification pathways</li>
+              <li>Engaging with cutting-edge technologies and enterprise-grade development practices</li>
+              <li>Building portfolio-ready projects with guidance from industry experts</li>
+            </ul>
+          </div>
 
-    <!-- 1M1B Green Skills Academy -->
-    <div class="item">
-      <h3>Green Tech & AI Intern</h3>
-      <h4 class="organization">1M1B Green Skills Academy (United Nations Supported)</h4>
-      <span class="period">November 2025 – Present</span>
-      <p>Participating in an AI-driven climate technology program focused on sustainable solutions and digital advocacy for environmental impact.</p>
-      <ul class="key-points">
-        <li>Utilizing Tableau and data analytics for climate data visualization and insights</li>
-        <li>Developing AI-powered solutions for sustainable development goals (SDGs)</li>
-        <li>Contributing to digital advocacy campaigns promoting climate awareness</li>
-        <li>Creating Net Zero roadmaps for corporate and community climate action</li>
-        <li>Collaborating on projects that blend technology with environmental sustainability</li>
-      </ul>
-    </div>
+          <div class="timeline-block">
+            <h4>Green Tech & AI Intern</h4>
+            <span class="badge-pill">November 2025 – Present</span>
+            <p><strong>1M1B Green Skills Academy (United Nations Supported)</strong></p>
+            <p>Participating in an AI-driven climate technology program focused on sustainable solutions and digital advocacy for environmental impact.</p>
+            <ul>
+              <li>Utilizing Tableau and data analytics for climate data visualization and insights</li>
+              <li>Developing AI-powered solutions for sustainable development goals (SDGs)</li>
+              <li>Contributing to digital advocacy campaigns promoting climate awareness</li>
+              <li>Creating Net Zero roadmaps for corporate and community climate action</li>
+              <li>Collaborating on projects that blend technology with environmental sustainability</li>
+            </ul>
+          </div>
 
-    <!-- Navodita Infotech -->
-    <div class="item">
-      <h3>Android Developer Intern</h3>
-      <h4 class="organization">Navodita Infotech, Allahabad</h4>
-      <span class="period">May – June 2025</span>
-      <p>Developed BlogBuzz - a full-featured blogging application with Firebase backend and real-time capabilities.</p>
-      <ul class="key-points">
-        <li>Architected and developed BlogBuzz app using Java and Firebase</li>
-        <li>Implemented Firebase Authentication for secure user management</li>
-        <li>Integrated Firebase Realtime Database for live content synchronization</li>
-        <li>Designed clean, intuitive UI following Material Design guidelines</li>
-        <li>Added Firebase Storage for image uploads and retrieval in blog posts</li>
-        <li>Followed MVVM architecture and clean code practices for scalability</li>
-      </ul>
-    </div>
+          <div class="timeline-block">
+            <h4>Android Developer Intern</h4>
+            <span class="badge-pill">May – June 2025</span>
+            <p><strong>Navodita Infotech, Allahabad</strong></p>
+            <p>Developed BlogBuzz - a full-featured blogging application with Firebase backend and real-time capabilities.</p>
+            <ul>
+              <li>Architected and developed BlogBuzz app using Java and Firebase</li>
+              <li>Implemented Firebase Authentication for secure user management</li>
+              <li>Integrated Firebase Realtime Database for live content synchronization</li>
+              <li>Designed clean, intuitive UI following Material Design guidelines</li>
+              <li>Added Firebase Storage for image uploads and retrieval in blog posts</li>
+              <li>Followed MVVM architecture and clean code practices for scalability</li>
+            </ul>
+          </div>
 
-    <!-- Capacity Building Program -->
-    <div class="item">
-      <h3>Campus Leader & Mentor</h3>
-      <h4 class="organization">United Institute of Management</h4>
-      <span class="period">October 2025 – Present</span>
-      <p>Leading capacity building initiatives and mentoring first-year students in communication and professional development.</p>
-      <ul class="key-points">
-        <li>Conducting interactive sessions on communication skills and personality development</li>
-        <li>Mentoring 50+ first-year students in technical and soft skills development</li>
-        <li>Organizing workshops on career planning and professional growth</li>
-        <li>Facilitating peer learning and collaborative project development</li>
-        <li>Building campus community through leadership and engagement activities</li>
-      </ul>
-    </div>
-  </div>
-</section>
+          <div class="timeline-block">
+            <h4>Campus Leader & Mentor</h4>
+            <span class="badge-pill">October 2025 – Present</span>
+            <p><strong>United Institute of Management</strong></p>
+            <p>Leading capacity building initiatives and mentoring first-year students in communication and professional development.</p>
+            <ul>
+              <li>Conducting interactive sessions on communication skills and personality development</li>
+              <li>Mentoring 50+ first-year students in technical and soft skills development</li>
+              <li>Organizing workshops on career planning and professional growth</li>
+              <li>Facilitating peer learning and collaborative project development</li>
+              <li>Building campus community through leadership and engagement activities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p><strong>United Institute of Management</strong></p>
+          <p class="mb-0">Currently pursuing Bachelor of Computer Applications with focus on mobile application development, software engineering, and emerging technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Preview Section -->
+    <section class="section" id="certificates-preview">
+      <div class="container">
+        <h2 class="section-title">Certifications & Credentials</h2>
+        <div class="card-simple text-center">
+          <div style="font-size: 4rem; color: var(--primary); margin-bottom: 1.5rem;">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 style="margin-bottom: 1rem;">13 Professional Certificates</h3>
+          <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+            I've earned certifications from leading organizations including IBM, Google, HP, Deloitte, TCS, and more. 
+            These credentials validate my expertise in Android Development, AI & Machine Learning, Data Science, 
+            Cybersecurity, and Project Management.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+            <span class="skill-tag">Android Development</span>
+            <span class="skill-tag">AI & ML</span>
+            <span class="skill-tag">Data Science</span>
+            <span class="skill-tag">Cybersecurity</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Climate Tech</span>
+          </div>
+          <a href="certificates.html" class="btn btn-primary cta-btn" style="display: inline-flex; align-items: center;">
+            <i class="fas fa-eye mr-2"></i>View All Certificates
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Achievements Section -->
-    <section class="portfolio-block" id="achievements">
+    <section class="section" id="achievements">
       <div class="container">
-        <h2>Achievements</h2>
-        <div class="item">
-          <h4>Winner – Group Discussion, Presentation & Modeling</h4>
-          <p>United Institute of Management</p>
-          <h4>Silver Medalist – Inter-College Kabaddi Championship</h4>
-          <p>Demonstrated teamwork and sportsmanship.</p>
-          <h4>2nd Prize – District Science Exhibition</h4>
-          <p>Automatic Fire-Extinguisher Robotic Vehicle</p>
+        <h2 class="section-title">Achievements & Recognition</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h4>Winner</h4>
+            <p>Group Discussion & Presentation<br>United Institute of Management</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h4>Silver Medalist</h4>
+            <p>Inter-College Kabaddi Championship<br>Demonstrated teamwork and sportsmanship</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h4>2nd Prize Winner</h4>
+            <p>District Science Exhibition<br>Automatic Fire-Extinguisher Robotic Vehicle</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>Mentor Recognition</h4>
+            <p>Successfully mentoring 50+ students<br>United Institute of Management</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="portfolio-block" id="contact">
+    <section class="section" id="contact">
       <div class="container">
-        <h2>Get In Touch</h2>
-        <div class="item">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:srijanshukla707@gmail.com">srijanshukla707@gmail.com</a>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/srijan707/" target="_blank">linkedin.com/in/srijan707/</a>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/srijanshukla71" target="_blank">github.com/srijanshukla71</a>
-          </div>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="card-simple">
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:srijanshukla707@gmail.com">srijanshukla707@gmail.com</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/srijan707/" target="_blank">linkedin.com/in/srijan707</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/srijanshukla71" target="_blank">github.com/srijanshukla71</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="page-footer">
+  <footer>
     <div class="container">
-      <div class="social-icons mb-4">
+      <div class="social-icons">
         <a href="mailto:srijanshukla707@gmail.com" title="Email">
           <i class="fas fa-envelope"></i>
         </a>
@@ -648,60 +868,82 @@
         </a>
       </div>
       <p class="mb-0">© 2025 Srijan Shukla. All Rights Reserved.</p>
+      <p class="mt-2" style="opacity: 0.8; font-size: 0.9rem;">Built with passion for mobile development</p>
     </div>
   </footer>
 
-  <!-- JS Scripts -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
   <script>
     $(document).ready(function() {
       // Mobile menu collapse
-      $('.navbar-nav>li>a').on('click', function(){
-          $('.navbar-collapse').collapse('hide');
+      $('.navbar-nav>li>a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
       });
 
       // Navbar scroll effect
       $(window).scroll(function() {
         if ($(this).scrollTop() > 50) {
-          $('.portfolio-navbar').addClass('scrolled');
+          $('.navbar').addClass('scrolled');
         } else {
-          $('.portfolio-navbar').removeClass('scrolled');
+          $('.navbar').removeClass('scrolled');
         }
       });
 
-      // Smooth scrolling for anchor links
+      // Smooth scrolling
       $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
           if (target.length) {
             $('html, body').animate({
-              scrollTop: target.offset().top - 80
-            }, 1000);
+              scrollTop: target.offset().top - 70
+            }, 800);
             return false;
           }
         }
       });
 
-      // Add fade-in animation to elements on scroll
+      // Active nav link on scroll
       $(window).scroll(function() {
-        $('.item').each(function() {
+        var scrollDistance = $(window).scrollTop() + 100;
+        $('section[id]').each(function() {
+          var sectionTop = $(this).offset().top;
+          var sectionHeight = $(this).outerHeight();
+          var sectionId = $(this).attr('id');
+          
+          if (scrollDistance >= sectionTop && scrollDistance < sectionTop + sectionHeight) {
+            $('.nav-link').removeClass('active');
+            $('.nav-link[href="#' + sectionId + '"]').addClass('active');
+          }
+        });
+      });
+
+      // Fade in animation on scroll
+      $(window).scroll(function() {
+        $('.card-simple, .certificate-card, .achievement-card, .timeline-block').each(function() {
           var elementTop = $(this).offset().top;
           var elementBottom = elementTop + $(this).outerHeight();
           var viewportTop = $(window).scrollTop();
           var viewportBottom = viewportTop + $(window).height();
 
           if (elementBottom > viewportTop && elementTop < viewportBottom) {
-            $(this).addClass('fade-in-up');
+            $(this).css('opacity', '1').css('transform', 'translateY(0)');
           }
         });
       });
 
-      // Trigger initial animation
+      // Initial fade in setup
+      $('.card-simple, .certificate-card, .achievement-card, .timeline-block').css({
+        'opacity': '0',
+        'transform': 'translateY(30px)',
+        'transition': 'opacity 0.6s ease, transform 0.6s ease'
+      });
+
+      // Trigger initial scroll check
       $(window).trigger('scroll');
     });
   </script>
 </body>
 </html>
-
